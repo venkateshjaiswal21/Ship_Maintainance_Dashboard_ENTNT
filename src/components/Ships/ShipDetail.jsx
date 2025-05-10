@@ -3,11 +3,18 @@ import { useComponents } from '../../contexts/ComponentsContext';
 import { useNavigate } from 'react-router-dom';
 import ComponentList from '../ShipComponents/ComponentList';
 import ComponentForm from '../ShipComponents/ComponentForm';
+import { useJobs } from '../../contexts/JobsContext';
+import JobList from '../Jobs/JobList';
+import { MData } from '../../data/MockData';
 import '../../styles/ShipForm.css';
 
 const ShipDetail = ({ ship, isAdmin }) => {
   const { components, addComponent, editComponent, deleteComponent } = useComponents();
   const shipComponents = components.filter((c) => c.shipId === ship.id);
+
+  const { jobs } = useJobs();
+  const engineers = MData.users.filter(u => u.role.toLowerCase() === 'engineer');
+  const shipJobs = jobs.filter(job => job.shipId === ship.id);
 
   const [showComponentForm, setShowComponentForm] = useState(false);
   const [componentInitialData, setComponentInitialData] = useState({});
@@ -79,7 +86,24 @@ const ShipDetail = ({ ship, isAdmin }) => {
       </div>
       <div className="ship-detail-section">
         <h3>Maintenance History</h3>
-        <p>Maintenance jobs for this ship will go here.</p>
+        {shipJobs.length === 0 ? (
+          <p>No maintenance jobs for this ship yet.</p>
+        ) : (
+          <JobList
+            jobs={shipJobs}
+            isAdmin={false}
+            isEngineer={false}
+            isInspector={false}
+            userId={null}
+            engineers={engineers}
+            onView={() => {}}
+            onEdit={() => {}}
+            onDelete={() => {}}
+            onStatusUpdate={() => {}}
+            onApprove={() => {}}
+            onUnapprove={() => {}}
+          />
+        )}
       </div>
     </div>
   );
