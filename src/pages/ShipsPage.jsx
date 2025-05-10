@@ -48,6 +48,8 @@ const ShipsPage = () => {
 
   return (
     <div className="ships-page-container">
+      <DashboardNav />
+      <br />
       <div className="ships-header">
         <h2>Ships</h2>
         {isAdmin && (
@@ -56,7 +58,6 @@ const ShipsPage = () => {
           </button>
         )}
       </div>
-      <DashboardNav />
       <ShipList
         ships={ships}
         isAdmin={isAdmin}

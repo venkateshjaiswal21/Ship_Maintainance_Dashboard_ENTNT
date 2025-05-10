@@ -8,6 +8,8 @@ import ShipDetailPage from './pages/ShipDetailPage';
 import { ShipsProvider } from './contexts/ShipsContext';
 import ComponentDetailPage from './pages/ComponentDetailPage';
 import { ComponentsProvider } from './contexts/ComponentsContext';
+import { JobsProvider } from './contexts/JobsContext';
+import JobsPage from './pages/JobsPage';
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = UseAuth();
@@ -28,6 +30,7 @@ function App() {
     <AuthProvider>
       <ShipsProvider>
         <ComponentsProvider>
+          <JobsProvider>
           <Router>
             <Routes>
               <Route path="/login" element={<LoginPage />} />
@@ -60,8 +63,14 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route  path="/jobs" element = {
+                <ProtectedRoute>
+                  <JobsPage />
+                </ProtectedRoute>
+              } />
             </Routes>
           </Router>
+          </JobsProvider> 
       </ComponentsProvider>
       </ShipsProvider>
     </AuthProvider>

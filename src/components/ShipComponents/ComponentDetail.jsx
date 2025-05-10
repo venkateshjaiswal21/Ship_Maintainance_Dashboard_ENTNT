@@ -13,10 +13,6 @@ const ComponentDetail = ({ component }) => {
         <strong>Installation Date:</strong> {component.installDate}<br />
         <strong>Last Maintenance Date:</strong> {component.lastMaintenanceDate}
       </div>
-      <div>
-        <h3>Job History</h3>
-        <p></p>
-      </div>
     </div>
   );
 };
