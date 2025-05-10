@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useShips } from '../contexts/ShipsContext';
+import { UseAuth } from '../contexts/AuthContext';
 import '../styles/ShipDetailPage.css';
 import ShipDetail from '../components/Ships/ShipDetail';
 
@@ -7,6 +8,8 @@ const ShipDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { ships } = useShips();
+  const { user } = UseAuth();
+  const isAdmin = user.role === 'Admin';
   const ship = ships.find((s) => s.id === id);
 
   if (!ship) {
@@ -21,7 +24,7 @@ const ShipDetailPage = () => {
   return (
     <div className="ship-detail-container">
       <button onClick={() => navigate(-1)} className="ship-detail-back">&larr; Back</button>
-      <ShipDetail ship={ship} />
+      <ShipDetail ship={ship} isAdmin={isAdmin} />
     </div>
   );
 };

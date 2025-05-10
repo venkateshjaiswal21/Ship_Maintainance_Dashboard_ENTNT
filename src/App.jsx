@@ -6,6 +6,8 @@ import DashboardPage from './pages/DashboardPage';
 import ShipsPage from './pages/ShipsPage';
 import ShipDetailPage from './pages/ShipDetailPage';
 import { ShipsProvider } from './contexts/ShipsContext';
+import ComponentDetailPage from './pages/ComponentDetailPage';
+import { ComponentsProvider } from './contexts/ComponentsContext';
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = UseAuth();
@@ -25,32 +27,42 @@ function App() {
   return (
     <AuthProvider>
       <ShipsProvider>
-      <Router>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <DashboardPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/ships" element={
-            <ProtectedRoute>
-              <ShipsPage />
-            </ProtectedRoute>
-          } />
-          <Route
-            path="/ships/:id"
-            element={
-              <ProtectedRoute>
-                <ShipDetailPage />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </Router>
+        <ComponentsProvider>
+          <Router>
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <DashboardPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/ships" element={
+                <ProtectedRoute>
+                  <ShipsPage />
+                </ProtectedRoute>
+              } />
+              <Route
+                path="/ships/:id"
+                element={
+                  <ProtectedRoute>
+                    <ShipDetailPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/components/:id"
+                element={
+                  <ProtectedRoute>
+                    <ComponentDetailPage />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </Router>
+      </ComponentsProvider>
       </ShipsProvider>
     </AuthProvider>
   );
