@@ -1,6 +1,7 @@
 import React from 'react';
 import { UseAuth } from '../contexts/AuthContext';
 import '../styles/DashboardPage.css';
+import DashboardNav from '../components/Dashboard/DashboardNav';
 
 const DashboardPage = () => {
   const { user, logout } = UseAuth();
@@ -17,7 +18,7 @@ const DashboardPage = () => {
           </button>
         </div>
       </header>
-
+      <DashboardNav />
       <main className="dashboard-content">
         {user.role === 'admin' && (
           <div className="admin-section">
