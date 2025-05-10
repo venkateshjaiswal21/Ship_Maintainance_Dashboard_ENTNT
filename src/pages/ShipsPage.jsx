@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { UseAuth } from '../contexts/AuthContext';
 import { MData } from '../data/MockData';
 import '../styles/ShipsPage.css';
+import ShipList from '../components/Ships/ShipList';
 import DashboardNav from '../components/Dashboard/DashboardNav';
-
 const getShipsFromStorage = () => {
   const stored = localStorage.getItem('ships');
   if (stored) return JSON.parse(stored);
@@ -27,31 +27,7 @@ const ShipsPage = () => {
         {isAdmin && <button className="add-ship-btn">Add Ship</button>}
       </div>
       <DashboardNav />
-      <table className="ships-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>IMO Number</th>
-            <th>Flag</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ships.map((ship) => (
-            <tr key={ship.id}>
-              <td>{ship.name}</td>
-              <td>{ship.imo}</td>
-              <td>{ship.flag}</td>
-              <td>{ship.status}</td>
-              <td className="ships-actions">
-                <button>View</button>
-                {isAdmin && <><button>Edit</button><button>Delete</button></>}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <ShipList ships={ships} isAdmin={isAdmin} />
     </div>
   );
 };
