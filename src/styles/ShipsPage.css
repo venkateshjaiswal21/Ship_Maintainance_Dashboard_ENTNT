@@ -1,0 +1,67 @@
+.ships-page-container {
+  width: 100%;
+  padding: 2rem 2vw;
+  background: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.ships-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.ships-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.ships-table th {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f0f4f8;
+  text-align: left;
+}
+
+.ships-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ships-actions button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #e3eafc;
+  color: #1a73e8;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ships-actions button:last-child {
+  margin-right: 0;
+}
+
+.ships-actions button:hover {
+  background: #c7d7f7;
+}
+
+.add-ship-btn {
+  background: #1a73e8;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-ship-btn:hover {
+  background: #0d47a1;
+} 

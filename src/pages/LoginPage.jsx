@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UseAuth } from '../contexts/AuthContext';
 import { MData } from '../data/MockData';
@@ -15,7 +15,6 @@ const LoginPage = () => {
     );
 
     if (user) {
-      // Don't store password in localStorage
       const { password: _, ...userWithoutPassword } = user;
       login(userWithoutPassword);
       navigate('/');

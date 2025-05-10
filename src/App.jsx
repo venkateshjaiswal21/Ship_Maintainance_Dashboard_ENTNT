@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, UseAuth } from './contexts/AuthContext';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
-import './App.css';
+import ShipsPage from './pages/ShipsPage';
 
-// Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = UseAuth();
 
@@ -34,6 +33,11 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="/ships" element={
+            <ProtectedRoute>
+              <ShipsPage />
+            </ProtectedRoute>
+          } />
         </Routes>
       </Router>
     </AuthProvider>
