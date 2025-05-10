@@ -4,6 +4,7 @@ import { AuthProvider, UseAuth } from './contexts/AuthContext';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import ShipsPage from './pages/ShipsPage';
+import { ShipsProvider } from './contexts/ShipsContext';
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = UseAuth();
@@ -22,6 +23,7 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <AuthProvider>
+      <ShipsProvider>
       <Router>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
@@ -40,6 +42,7 @@ function App() {
           } />
         </Routes>
       </Router>
+      </ShipsProvider>
     </AuthProvider>
   );
 }

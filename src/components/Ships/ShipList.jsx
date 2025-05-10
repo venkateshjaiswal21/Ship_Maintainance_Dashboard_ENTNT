@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShipList = ({ ships, isAdmin }) => (
+const ShipList = ({ ships, isAdmin, onEdit, onDelete, onView }) => (
   <table className="ships-table">
     <thead>
       <tr>
@@ -19,11 +19,11 @@ const ShipList = ({ ships, isAdmin }) => (
           <td>{ship.flag}</td>
           <td>{ship.status}</td>
           <td className="ships-actions">
-            <button>View</button>
+            <button onClick={() => onView(ship)}>View</button>
             {isAdmin && (
               <>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button onClick={() => onEdit(ship)}>Edit</button>
+                <button onClick={() => onDelete(ship.id)}>Delete</button>
               </>
             )}
           </td>
