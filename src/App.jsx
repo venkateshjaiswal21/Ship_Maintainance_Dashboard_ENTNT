@@ -4,6 +4,7 @@ import { AuthProvider, UseAuth } from './contexts/AuthContext';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import ShipsPage from './pages/ShipsPage';
+import ShipDetailPage from './pages/ShipDetailPage';
 import { ShipsProvider } from './contexts/ShipsContext';
 
 const ProtectedRoute = ({ children }) => {
@@ -40,6 +41,14 @@ function App() {
               <ShipsPage />
             </ProtectedRoute>
           } />
+          <Route
+            path="/ships/:id"
+            element={
+              <ProtectedRoute>
+                <ShipDetailPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Router>
       </ShipsProvider>

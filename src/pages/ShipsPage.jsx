@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { UseAuth } from '../contexts/AuthContext';
 import { useShips } from '../contexts/ShipsContext';
 import '../styles/ShipsPage.css';
@@ -10,6 +11,7 @@ const ShipsPage = () => {
   const { user } = UseAuth();
   const { ships, addShip, editShip, deleteShip } = useShips();
   const isAdmin = user.role.toLowerCase() === 'admin';
+  const navigate = useNavigate();
 
   const [showForm, setShowForm] = useState(false);
   const [formInitialData, setFormInitialData] = useState({});
@@ -31,9 +33,7 @@ const ShipsPage = () => {
   };
 
   const handleViewShip = (ship) => {
-    alert(
-      `Ship Details:\nName: ${ship.name}\nIMO: ${ship.imo}\nFlag: ${ship.flag}\nStatus: ${ship.status}`
-    );
+    navigate(`/ships/${ship.id}`);
   };
 
   const handleFormSubmit = (shipData) => {
