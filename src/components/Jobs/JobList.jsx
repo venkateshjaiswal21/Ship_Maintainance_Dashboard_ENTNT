@@ -36,7 +36,7 @@ const JobList = ({
             <td>{job.type}</td>
             <td>{job.priority}</td>
             <td>
-              {canUpdateStatus ? (
+              {isAdmin ? (
                 <select 
                   value={job.status} 
                   onChange={(e) => onStatusUpdate(job.id, e.target.value)}
@@ -45,8 +45,22 @@ const JobList = ({
                   <option value="Open">Open</option>
                   <option value="In Progress">In Progress</option>
                   <option value="Completed">Completed</option>
-                  {isAdmin && <option value="Approved">Approved</option>}
+                  <option value="Approved">Approved</option>
                 </select>
+              ) : isEngineer && job.assignedEngineerId === userId ? (
+                job.status === 'Approved' ? (
+                  <span className="status-text status-approved">Approved</span>
+                ) : (
+                  <select 
+                    value={job.status} 
+                    onChange={(e) => onStatusUpdate(job.id, e.target.value)}
+                    className="status-select"
+                  >
+                    <option value="Open">Open</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                  </select>
+                )
               ) : (
                 job.status
               )}
