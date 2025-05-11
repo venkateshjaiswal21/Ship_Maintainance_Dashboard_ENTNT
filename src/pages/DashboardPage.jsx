@@ -3,6 +3,7 @@ import { UseAuth } from '../contexts/AuthContext';
 import '../styles/DashboardPage.css';
 import DashboardNav from '../components/Dashboard/DashboardNav';
 import JobCalendar from '../components/Jobs/JobCalendar';
+import KPICards from '../components/Dashboard/KPICards';
 
 const DashboardPage = () => {
   const { user, logout } = UseAuth();
@@ -20,6 +21,8 @@ const DashboardPage = () => {
         </div>
       </header>
       <DashboardNav />
+      <br />
+      <KPICards />
       <div className="dashboard-content">
         <h2>Welcome, {user.name}</h2>
         <div className="dashboard-section">
