@@ -11,7 +11,6 @@ const Charts = () => {
   const { jobs } = UseJobs();
   const { components } = UseComponents();
 
-  // Bar Chart: Jobs by Status
   const jobsByStatus = useMemo(() => {
     const statusCounts = jobs.reduce((acc, job) => {
       const status = job.status ? job.status.toLowerCase() : 'unknown';
@@ -30,7 +29,6 @@ const Charts = () => {
     };
   }, [jobs]);
 
-  // Line Chart: Jobs Completed Over Time (Last 6 Months)
   const jobsCompletedOverTime = useMemo(() => {
     const now = new Date();
     const sixMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 6, 1);
@@ -60,7 +58,6 @@ const Charts = () => {
     };
   }, [jobs]);
 
-  // Pie Chart: Components by Maintenance Status
   const componentsByMaintenanceStatus = useMemo(() => {
     const now = new Date();
     const OVERDUE_DAYS = 180;

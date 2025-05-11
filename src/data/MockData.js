@@ -119,7 +119,7 @@ export const MData = {
       name: "MSC Oscar",
       imo: "9703291",
       flag: "Liberia",
-      status: "Decommissioned"
+      status: "Inactive"
     },
     {
       id: "s6",
@@ -155,240 +155,950 @@ export const MData = {
       imo: "9781889",
       flag: "Italy",
       status: "Active"
-    },
-    {
-      id: "s11",
-      name: "Norwegian Bliss",
-      imo: "9751509",
-      flag: "Bahamas",
-      status: "Active"
-    },
-    {
-      id: "s12",
-      name: "MSC Meraviglia",
-      imo: "9760512",
-      flag: "Malta",
-      status: "Decommissioned"
     }
   ],
   components: [
+    // Ship 1 Components
     {
       id: "c1",
       shipId: "s1",
       name: "Main Engine",
       serialNumber: "ME-1234",
-      installDate: "2020-01-10",
-      lastMaintenanceDate: "2024-03-12"
+      installDate: "2023-11-10",
+      lastMaintenanceDate: "2023-12-12"
     },
     {
       id: "c2",
-      shipId: "s2",
-      name: "Radar",
+      shipId: "s1",
+      name: "Radar System",
       serialNumber: "RAD-5678",
-      installDate: "2021-07-18",
-      lastMaintenanceDate: "2023-12-01"
+      installDate: "2023-12-15",
+      lastMaintenanceDate: "2024-01-01"
     },
     {
       id: "c3",
-      shipId: "s3",
+      shipId: "s1",
       name: "Propeller",
       serialNumber: "PR-1111",
-      installDate: "2019-05-22",
-      lastMaintenanceDate: "2024-01-15"
+      installDate: "2024-01-22",
+      lastMaintenanceDate: "2024-02-15"
     },
+    // Ship 2 Components
     {
       id: "c4",
-      shipId: "s4",
+      shipId: "s2",
       name: "Navigation System",
       serialNumber: "NAV-2222",
-      installDate: "2022-03-10",
-      lastMaintenanceDate: "2024-04-10"
+      installDate: "2023-11-20",
+      lastMaintenanceDate: "2023-12-20"
     },
     {
       id: "c5",
-      shipId: "s5",
-      name: "Anchor",
+      shipId: "s2",
+      name: "Anchor System",
       serialNumber: "AN-3333",
-      installDate: "2018-11-30",
-      lastMaintenanceDate: "2023-10-20"
+      installDate: "2023-12-28",
+      lastMaintenanceDate: "2024-01-20"
     },
     {
       id: "c6",
-      shipId: "s6",
-      name: "Lifeboat",
+      shipId: "s2",
+      name: "Lifeboat System",
       serialNumber: "LB-4444",
-      installDate: "2021-08-15",
-      lastMaintenanceDate: "2024-02-28"
+      installDate: "2024-01-15",
+      lastMaintenanceDate: "2024-02-15"
     },
+    // Ship 3 Components
     {
       id: "c7",
-      shipId: "s7",
+      shipId: "s3",
       name: "Fire Suppression",
       serialNumber: "FS-5555",
-      installDate: "2020-12-01",
-      lastMaintenanceDate: "2024-03-01"
+      installDate: "2023-12-01",
+      lastMaintenanceDate: "2024-01-01"
     },
     {
       id: "c8",
-      shipId: "s8",
-      name: "Communication",
+      shipId: "s3",
+      name: "Communication System",
       serialNumber: "COM-6666",
-      installDate: "2022-06-20",
-      lastMaintenanceDate: "2024-05-01"
+      installDate: "2024-01-20",
+      lastMaintenanceDate: "2024-02-20"
     },
     {
       id: "c9",
-      shipId: "s9",
+      shipId: "s3",
       name: "Ballast System",
       serialNumber: "BS-7777",
-      installDate: "2019-09-09",
-      lastMaintenanceDate: "2023-11-11"
+      installDate: "2024-02-15",
+      lastMaintenanceDate: "2024-03-15"
     },
+    // Ship 4 Components
     {
       id: "c10",
-      shipId: "s10",
+      shipId: "s4",
       name: "Steering Gear",
       serialNumber: "SG-8888",
-      installDate: "2020-02-02",
-      lastMaintenanceDate: "2024-03-03"
+      installDate: "2023-11-25",
+      lastMaintenanceDate: "2023-12-25"
     },
     {
       id: "c11",
-      shipId: "s11",
+      shipId: "s4",
       name: "Generator",
       serialNumber: "GEN-9999",
-      installDate: "2021-04-04",
-      lastMaintenanceDate: "2024-04-04"
+      installDate: "2023-12-30",
+      lastMaintenanceDate: "2024-01-30"
     },
     {
       id: "c12",
-      shipId: "s12",
+      shipId: "s4",
       name: "Fuel Pump",
       serialNumber: "FP-1010",
-      installDate: "2017-07-07",
-      lastMaintenanceDate: "2023-07-07"
+      installDate: "2024-01-10",
+      lastMaintenanceDate: "2024-02-10"
+    },
+    // Ship 5 Components
+    {
+      id: "c13",
+      shipId: "s5",
+      name: "Main Engine",
+      serialNumber: "ME-2345",
+      installDate: "2023-12-10",
+      lastMaintenanceDate: "2024-01-10"
+    },
+    {
+      id: "c14",
+      shipId: "s5",
+      name: "Radar System",
+      serialNumber: "RAD-6789",
+      installDate: "2024-01-25",
+      lastMaintenanceDate: "2024-02-25"
+    },
+    {
+      id: "c15",
+      shipId: "s5",
+      name: "Propeller",
+      serialNumber: "PR-2222",
+      installDate: "2024-02-10",
+      lastMaintenanceDate: "2024-03-10"
+    },
+    // Ship 6 Components
+    {
+      id: "c16",
+      shipId: "s6",
+      name: "Navigation System",
+      serialNumber: "NAV-3333",
+      installDate: "2023-11-15",
+      lastMaintenanceDate: "2023-12-15"
+    },
+    {
+      id: "c17",
+      shipId: "s6",
+      name: "Anchor System",
+      serialNumber: "AN-4444",
+      installDate: "2023-12-10",
+      lastMaintenanceDate: "2024-01-10"
+    },
+    {
+      id: "c18",
+      shipId: "s6",
+      name: "Lifeboat System",
+      serialNumber: "LB-5555",
+      installDate: "2024-01-20",
+      lastMaintenanceDate: "2024-02-20"
+    },
+    // Ship 7 Components
+    {
+      id: "c19",
+      shipId: "s7",
+      name: "Fire Suppression",
+      serialNumber: "FS-6666",
+      installDate: "2023-12-05",
+      lastMaintenanceDate: "2024-01-05"
+    },
+    {
+      id: "c20",
+      shipId: "s7",
+      name: "Communication System",
+      serialNumber: "COM-7777",
+      installDate: "2024-01-15",
+      lastMaintenanceDate: "2024-02-15"
+    },
+    {
+      id: "c21",
+      shipId: "s7",
+      name: "Ballast System",
+      serialNumber: "BS-8888",
+      installDate: "2024-02-10",
+      lastMaintenanceDate: "2024-03-10"
+    },
+    // Ship 8 Components
+    {
+      id: "c22",
+      shipId: "s8",
+      name: "Steering Gear",
+      serialNumber: "SG-9999",
+      installDate: "2023-11-18",
+      lastMaintenanceDate: "2023-12-18"
+    },
+    {
+      id: "c23",
+      shipId: "s8",
+      name: "Generator",
+      serialNumber: "GEN-1010",
+      installDate: "2023-12-28",
+      lastMaintenanceDate: "2024-01-28"
+    },
+    {
+      id: "c24",
+      shipId: "s8",
+      name: "Fuel Pump",
+      serialNumber: "FP-2020",
+      installDate: "2024-01-12",
+      lastMaintenanceDate: "2024-02-12"
+    },
+    // Ship 9 Components
+    {
+      id: "c25",
+      shipId: "s9",
+      name: "Main Engine",
+      serialNumber: "ME-3456",
+      installDate: "2023-12-20",
+      lastMaintenanceDate: "2024-01-20"
+    },
+    {
+      id: "c26",
+      shipId: "s9",
+      name: "Radar System",
+      serialNumber: "RAD-7890",
+      installDate: "2024-01-25",
+      lastMaintenanceDate: "2024-02-25"
+    },
+    {
+      id: "c27",
+      shipId: "s9",
+      name: "Propeller",
+      serialNumber: "PR-3333",
+      installDate: "2024-02-10",
+      lastMaintenanceDate: "2024-03-10"
+    },
+    // Ship 10 Components
+    {
+      id: "c28",
+      shipId: "s10",
+      name: "Navigation System",
+      serialNumber: "NAV-4444",
+      installDate: "2023-11-22",
+      lastMaintenanceDate: "2023-12-22"
+    },
+    {
+      id: "c29",
+      shipId: "s10",
+      name: "Anchor System",
+      serialNumber: "AN-5555",
+      installDate: "2023-12-15",
+      lastMaintenanceDate: "2024-01-15"
+    },
+    {
+      id: "c30",
+      shipId: "s10",
+      name: "Lifeboat System",
+      serialNumber: "LB-6666",
+      installDate: "2024-01-25",
+      lastMaintenanceDate: "2024-02-25"
     }
   ],
   jobs: [
+    // Jobs for Component 1
     {
       id: "j1",
       componentId: "c1",
       shipId: "s1",
       type: "Inspection",
       priority: "High",
-      status: "Open",
+      status: "In Progress",
       assignedEngineerId: "3",
-      scheduledDate: "2025-05-05"
+      scheduledDate: "2023-11-15",
+      completedDate: null
     },
     {
       id: "j2",
-      componentId: "c2",
-      shipId: "s2",
-      type: "Repair",
+      componentId: "c1",
+      shipId: "s1",
+      type: "Maintenance",
       priority: "Medium",
-      status: "In Progress",
+      status: "Completed",
       assignedEngineerId: "4",
-      scheduledDate: "2025-06-10"
+      scheduledDate: "2023-12-10",
+      completedDate: "2023-12-12"
     },
+    // Jobs for Component 2
     {
       id: "j3",
-      componentId: "c3",
-      shipId: "s3",
-      type: "Replacement",
-      priority: "Low",
+      componentId: "c2",
+      shipId: "s1",
+      type: "Inspection",
+      priority: "Medium",
       status: "Completed",
       assignedEngineerId: "5",
-      scheduledDate: "2025-07-15"
+      scheduledDate: "2024-01-05",
+      completedDate: "2024-01-07"
     },
     {
       id: "j4",
-      componentId: "c4",
-      shipId: "s4",
-      type: "Inspection",
-      priority: "High",
-      status: "Approved",
+      componentId: "c2",
+      shipId: "s1",
+      type: "Maintenance",
+      priority: "Low",
+      status: "In Progress",
       assignedEngineerId: "6",
-      scheduledDate: "2025-08-20"
+      scheduledDate: "2024-01-15",
+      completedDate: null
     },
+    // Jobs for Component 3
     {
       id: "j5",
-      componentId: "c5",
-      shipId: "s5",
-      type: "Repair",
-      priority: "Medium",
-      status: "Open",
+      componentId: "c3",
+      shipId: "s1",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
       assignedEngineerId: "10",
-      scheduledDate: "2025-09-25"
+      scheduledDate: "2024-02-10",
+      completedDate: "2024-02-12"
     },
     {
       id: "j6",
-      componentId: "c6",
-      shipId: "s6",
-      type: "Inspection",
-      priority: "Low",
-      status: "In Progress",
+      componentId: "c3",
+      shipId: "s1",
+      type: "Repair",
+      priority: "Medium",
+      status: "Open",
       assignedEngineerId: "11",
-      scheduledDate: "2025-10-30"
+      scheduledDate: "2024-02-20",
+      completedDate: null
     },
+    // Jobs for Component 4
     {
       id: "j7",
-      componentId: "c7",
-      shipId: "s7",
-      type: "Replacement",
+      componentId: "c4",
+      shipId: "s2",
+      type: "Inspection",
       priority: "High",
       status: "Completed",
       assignedEngineerId: "3",
-      scheduledDate: "2025-11-05"
+      scheduledDate: "2023-11-20",
+      completedDate: "2023-11-22"
     },
     {
       id: "j8",
-      componentId: "c8",
-      shipId: "s8",
-      type: "Repair",
+      componentId: "c4",
+      shipId: "s2",
+      type: "Maintenance",
       priority: "Medium",
-      status: "Approved",
+      status: "In Progress",
       assignedEngineerId: "4",
-      scheduledDate: "2025-12-10"
+      scheduledDate: "2023-12-15",
+      completedDate: null
     },
+    // Jobs for Component 5
     {
       id: "j9",
-      componentId: "c9",
-      shipId: "s9",
+      componentId: "c5",
+      shipId: "s2",
       type: "Inspection",
-      priority: "Low",
-      status: "Open",
+      priority: "Medium",
+      status: "Completed",
       assignedEngineerId: "5",
-      scheduledDate: "2026-01-15"
+      scheduledDate: "2024-01-10",
+      completedDate: "2024-01-12"
     },
     {
       id: "j10",
-      componentId: "c10",
-      shipId: "s10",
+      componentId: "c5",
+      shipId: "s2",
       type: "Repair",
       priority: "High",
-      status: "In Progress",
+      status: "Open",
       assignedEngineerId: "6",
-      scheduledDate: "2026-02-20"
+      scheduledDate: "2024-01-20",
+      completedDate: null
     },
+    // Jobs for Component 6
     {
       id: "j11",
-      componentId: "c11",
-      shipId: "s11",
-      type: "Replacement",
-      priority: "Medium",
+      componentId: "c6",
+      shipId: "s2",
+      type: "Inspection",
+      priority: "Low",
       status: "Completed",
       assignedEngineerId: "10",
-      scheduledDate: "2026-03-25"
+      scheduledDate: "2024-02-15",
+      completedDate: "2024-02-17"
     },
     {
       id: "j12",
-      componentId: "c12",
-      shipId: "s12",
+      componentId: "c6",
+      shipId: "s2",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-02-25",
+      completedDate: null
+    },
+    // Jobs for Component 7
+    {
+      id: "j13",
+      componentId: "c7",
+      shipId: "s3",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-12-01",
+      completedDate: "2023-12-03"
+    },
+    {
+      id: "j14",
+      componentId: "c7",
+      shipId: "s3",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2024-01-10",
+      completedDate: null
+    },
+    // Jobs for Component 8
+    {
+      id: "j15",
+      componentId: "c8",
+      shipId: "s3",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-02-15",
+      completedDate: "2024-02-17"
+    },
+    {
+      id: "j16",
+      componentId: "c8",
+      shipId: "s3",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-02-25",
+      completedDate: null
+    },
+    // Jobs for Component 9
+    {
+      id: "j17",
+      componentId: "c9",
+      shipId: "s3",
       type: "Inspection",
       priority: "Low",
-      status: "Approved",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-03-10",
+      completedDate: "2024-03-12"
+    },
+    {
+      id: "j18",
+      componentId: "c9",
+      shipId: "s3",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
       assignedEngineerId: "11",
-      scheduledDate: "2026-04-30"
+      scheduledDate: "2024-03-20",
+      completedDate: null
+    },
+    // Jobs for Component 10
+    {
+      id: "j19",
+      componentId: "c10",
+      shipId: "s4",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-11-25",
+      completedDate: "2023-11-27"
+    },
+    {
+      id: "j20",
+      componentId: "c10",
+      shipId: "s4",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2023-12-20",
+      completedDate: null
+    },
+    // Jobs for Component 11
+    {
+      id: "j21",
+      componentId: "c11",
+      shipId: "s4",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-01-15",
+      completedDate: "2024-01-17"
+    },
+    {
+      id: "j22",
+      componentId: "c11",
+      shipId: "s4",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-01-25",
+      completedDate: null
+    },
+    // Jobs for Component 12
+    {
+      id: "j23",
+      componentId: "c12",
+      shipId: "s4",
+      type: "Inspection",
+      priority: "Low",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-02-10",
+      completedDate: "2024-02-12"
+    },
+    {
+      id: "j24",
+      componentId: "c12",
+      shipId: "s4",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-02-20",
+      completedDate: null
+    },
+    // Jobs for Component 13
+    {
+      id: "j25",
+      componentId: "c13",
+      shipId: "s5",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-12-10",
+      completedDate: "2023-12-12"
+    },
+    {
+      id: "j26",
+      componentId: "c13",
+      shipId: "s5",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2024-01-10",
+      completedDate: null
+    },
+    // Jobs for Component 14
+    {
+      id: "j27",
+      componentId: "c14",
+      shipId: "s5",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-02-15",
+      completedDate: "2024-02-17"
+    },
+    {
+      id: "j28",
+      componentId: "c14",
+      shipId: "s5",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-02-25",
+      completedDate: null
+    },
+    // Jobs for Component 15
+    {
+      id: "j29",
+      componentId: "c15",
+      shipId: "s5",
+      type: "Inspection",
+      priority: "Low",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-03-10",
+      completedDate: "2024-03-12"
+    },
+    {
+      id: "j30",
+      componentId: "c15",
+      shipId: "s5",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-03-20",
+      completedDate: null
+    },
+    // Jobs for Component 16
+    {
+      id: "j31",
+      componentId: "c16",
+      shipId: "s6",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-11-15",
+      completedDate: "2023-11-17"
+    },
+    {
+      id: "j32",
+      componentId: "c16",
+      shipId: "s6",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2023-12-10",
+      completedDate: null
+    },
+    // Jobs for Component 17
+    {
+      id: "j33",
+      componentId: "c17",
+      shipId: "s6",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-01-05",
+      completedDate: "2024-01-07"
+    },
+    {
+      id: "j34",
+      componentId: "c17",
+      shipId: "s6",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-01-15",
+      completedDate: null
+    },
+    // Jobs for Component 18
+    {
+      id: "j35",
+      componentId: "c18",
+      shipId: "s6",
+      type: "Inspection",
+      priority: "Low",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-02-10",
+      completedDate: "2024-02-12"
+    },
+    {
+      id: "j36",
+      componentId: "c18",
+      shipId: "s6",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-02-20",
+      completedDate: null
+    },
+    // Jobs for Component 19
+    {
+      id: "j37",
+      componentId: "c19",
+      shipId: "s7",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-12-05",
+      completedDate: "2023-12-07"
+    },
+    {
+      id: "j38",
+      componentId: "c19",
+      shipId: "s7",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2024-01-10",
+      completedDate: null
+    },
+    // Jobs for Component 20
+    {
+      id: "j39",
+      componentId: "c20",
+      shipId: "s7",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-02-15",
+      completedDate: "2024-02-17"
+    },
+    {
+      id: "j40",
+      componentId: "c20",
+      shipId: "s7",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-02-25",
+      completedDate: null
+    },
+    // Jobs for Component 21
+    {
+      id: "j41",
+      componentId: "c21",
+      shipId: "s7",
+      type: "Inspection",
+      priority: "Low",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-03-10",
+      completedDate: "2024-03-12"
+    },
+    {
+      id: "j42",
+      componentId: "c21",
+      shipId: "s7",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-03-20",
+      completedDate: null
+    },
+    // Jobs for Component 22
+    {
+      id: "j43",
+      componentId: "c22",
+      shipId: "s8",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-11-18",
+      completedDate: "2023-11-20"
+    },
+    {
+      id: "j44",
+      componentId: "c22",
+      shipId: "s8",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2023-12-18",
+      completedDate: null
+    },
+    // Jobs for Component 23
+    {
+      id: "j45",
+      componentId: "c23",
+      shipId: "s8",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-01-28",
+      completedDate: "2024-01-30"
+    },
+    {
+      id: "j46",
+      componentId: "c23",
+      shipId: "s8",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-02-05",
+      completedDate: null
+    },
+    // Jobs for Component 24
+    {
+      id: "j47",
+      componentId: "c24",
+      shipId: "s8",
+      type: "Inspection",
+      priority: "Low",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-02-12",
+      completedDate: "2024-02-14"
+    },
+    {
+      id: "j48",
+      componentId: "c24",
+      shipId: "s8",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-02-22",
+      completedDate: null
+    },
+    // Jobs for Component 25
+    {
+      id: "j49",
+      componentId: "c25",
+      shipId: "s9",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-12-20",
+      completedDate: "2023-12-22"
+    },
+    {
+      id: "j50",
+      componentId: "c25",
+      shipId: "s9",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2024-01-20",
+      completedDate: null
+    },
+    // Jobs for Component 26
+    {
+      id: "j51",
+      componentId: "c26",
+      shipId: "s9",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-02-25",
+      completedDate: "2024-02-27"
+    },
+    {
+      id: "j52",
+      componentId: "c26",
+      shipId: "s9",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-03-05",
+      completedDate: null
+    },
+    // Jobs for Component 27
+    {
+      id: "j53",
+      componentId: "c27",
+      shipId: "s9",
+      type: "Inspection",
+      priority: "Low",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-03-10",
+      completedDate: "2024-03-12"
+    },
+    {
+      id: "j54",
+      componentId: "c27",
+      shipId: "s9",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-03-20",
+      completedDate: null
+    },
+    // Jobs for Component 28
+    {
+      id: "j55",
+      componentId: "c28",
+      shipId: "s10",
+      type: "Inspection",
+      priority: "High",
+      status: "Completed",
+      assignedEngineerId: "3",
+      scheduledDate: "2023-11-22",
+      completedDate: "2023-11-24"
+    },
+    {
+      id: "j56",
+      componentId: "c28",
+      shipId: "s10",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "4",
+      scheduledDate: "2023-12-22",
+      completedDate: null
+    },
+    // Jobs for Component 29
+    {
+      id: "j57",
+      componentId: "c29",
+      shipId: "s10",
+      type: "Inspection",
+      priority: "Medium",
+      status: "Completed",
+      assignedEngineerId: "5",
+      scheduledDate: "2024-01-15",
+      completedDate: "2024-01-17"
+    },
+    {
+      id: "j58",
+      componentId: "c29",
+      shipId: "s10",
+      type: "Repair",
+      priority: "High",
+      status: "Open",
+      assignedEngineerId: "6",
+      scheduledDate: "2024-01-25",
+      completedDate: null
+    },
+    // Jobs for Component 30
+    {
+      id: "j59",
+      componentId: "c30",
+      shipId: "s10",
+      type: "Inspection",
+      priority: "Low",
+      status: "Completed",
+      assignedEngineerId: "10",
+      scheduledDate: "2024-02-25",
+      completedDate: "2024-02-27"
+    },
+    {
+      id: "j60",
+      componentId: "c30",
+      shipId: "s10",
+      type: "Maintenance",
+      priority: "Medium",
+      status: "In Progress",
+      assignedEngineerId: "11",
+      scheduledDate: "2024-03-05",
+      completedDate: null
     }
   ]
 }; 
