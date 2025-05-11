@@ -4,7 +4,7 @@ import '../styles/DashboardPage.css';
 import DashboardNav from '../components/Dashboard/DashboardNav';
 import JobCalendar from '../components/Jobs/JobCalendar';
 import KPICards from '../components/Dashboard/KPICards';
-
+import Charts from '../components/Dashboard/Charts';
 const DashboardPage = () => {
   const { user, logout } = UseAuth();
 
@@ -23,6 +23,9 @@ const DashboardPage = () => {
       <DashboardNav />
       <br />
       <KPICards />
+      <br />
+      <Charts />
+      <br />
       <div className="dashboard-content">
         <h2>Welcome, {user.name}</h2>
         <div className="dashboard-section">

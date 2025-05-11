@@ -30,7 +30,7 @@ const KPICards = () => {
         <div className="kpi-value">{totalShips}</div>
       </div>
       <div className="kpi-card">
-        <div className="kpi-title">Components Overdue Maintainence</div>
+        <div className="kpi-title">Components Overdue (Maintainence)</div>
         <div className="kpi-value">{totalOverdueComponents}</div>
       </div>
       <div className="kpi-card">
