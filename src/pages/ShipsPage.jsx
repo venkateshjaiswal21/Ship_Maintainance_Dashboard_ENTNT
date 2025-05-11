@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UseAuth } from '../contexts/AuthContext';
-import { useShips } from '../contexts/ShipsContext';
+import { UseShips } from '../contexts/ShipsContext';
 import '../styles/ShipsPage.css';
 import ShipList from '../components/Ships/ShipList';
 import ShipForm from '../components/Ships/ShipForm';
@@ -9,7 +9,7 @@ import DashboardNav from '../components/Dashboard/DashboardNav';
 
 const ShipsPage = () => {
   const { user } = UseAuth();
-  const { ships, addShip, editShip, deleteShip } = useShips();
+  const { ships, addShip, editShip, deleteShip } = UseShips();
   const isAdmin = user.role.toLowerCase() === 'admin';
   const navigate = useNavigate();
 

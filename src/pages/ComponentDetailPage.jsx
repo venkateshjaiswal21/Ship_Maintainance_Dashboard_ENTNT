@@ -1,11 +1,11 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useComponents } from '../contexts/ComponentsContext';
+import { UseComponents } from '../contexts/ComponentsContext';
 import ComponentDetail from '../components/ShipComponents/ComponentDetail';
 
 const ComponentDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { components } = useComponents();
+  const { components } = UseComponents();
   const component = components.find(c => String(c.id) === String(id));
 
   if (!component) {

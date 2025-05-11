@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import { useComponents } from '../../contexts/ComponentsContext';
+import { UseComponents } from '../../contexts/ComponentsContext';
+import { UseJobs } from '../../contexts/JobsContext';
 import { useNavigate } from 'react-router-dom';
 import ComponentList from '../ShipComponents/ComponentList';
 import ComponentForm from '../ShipComponents/ComponentForm';
-import { useJobs } from '../../contexts/JobsContext';
 import JobList from '../Jobs/JobList';
 import { MData } from '../../data/MockData';
 import '../../styles/ShipForm.css';
 
 const ShipDetail = ({ ship, isAdmin }) => {
-  const { components, addComponent, editComponent, deleteComponent } = useComponents();
+  const { components, addComponent, editComponent, deleteComponent } = UseComponents();
   const shipComponents = components.filter((c) => c.shipId === ship.id);
 
-  const { jobs } = useJobs();
+  const { jobs } = UseJobs();
   const engineers = MData.users.filter(u => u.role.toLowerCase() === 'engineer');
   const shipJobs = jobs.filter(job => job.shipId === ship.id);
 

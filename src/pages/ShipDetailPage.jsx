@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useShips } from '../contexts/ShipsContext';
+import { UseShips } from '../contexts/ShipsContext';
 import { UseAuth } from '../contexts/AuthContext';
 import '../styles/ShipDetailPage.css';
 import ShipDetail from '../components/Ships/ShipDetail';
@@ -7,7 +7,7 @@ import ShipDetail from '../components/Ships/ShipDetail';
 const ShipDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { ships } = useShips();
+  const { ships } = UseShips();
   const { user } = UseAuth();
   const isAdmin = user.role === 'Admin';
   const ship = ships.find((s) => s.id === id);

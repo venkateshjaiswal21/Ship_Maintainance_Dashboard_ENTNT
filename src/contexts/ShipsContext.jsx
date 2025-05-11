@@ -35,10 +35,10 @@ export const ShipsProvider = ({ children }) => {
   );
 };
 
-export const useShips = () => {
+export const UseShips = () => {
   const context = useContext(ShipsContext);
   if (!context) {
-    throw new Error('useShips must be used within a ShipsProvider');
+    throw new Error('UseShips must be used within a ShipsProvider');
   }
   return context;
 };

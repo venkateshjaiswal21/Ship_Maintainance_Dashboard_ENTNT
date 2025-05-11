@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { UseAuth } from '../contexts/AuthContext';
-import { useJobs } from '../contexts/JobsContext';
-import { useShips } from '../contexts/ShipsContext';
+import { UseJobs } from '../contexts/JobsContext';
+import { UseShips } from '../contexts/ShipsContext';
 import { MData } from '../data/MockData';
 import JobList from '../components/Jobs/JobList';
 import JobForm from '../components/Jobs/JobForm';
@@ -10,8 +10,8 @@ import DashboardNav from '../components/Dashboard/DashboardNav';
 
 const JobsPage = () => {
   const { user } = UseAuth();
-  const { jobs, addJob, editJob, deleteJob, filterJobs, updateJobStatus, approveJob, unapproveJob } = useJobs();
-  const { ships } = useShips();
+  const { jobs, addJob, editJob, deleteJob, filterJobs, updateJobStatus, approveJob, unapproveJob } = UseJobs();
+  const { ships } = UseShips();
   const isAdmin = user.role.toLowerCase() === 'admin';
   const isEngineer = user.role.toLowerCase() === 'engineer';
   const isInspector = user.role.toLowerCase() === 'inspector';

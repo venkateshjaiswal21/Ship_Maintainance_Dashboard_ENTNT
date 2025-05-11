@@ -71,10 +71,10 @@ export const JobsProvider = ({ children }) => {
   );
 };
 
-export const useJobs = () => {
+export const UseJobs = () => {
   const context = useContext(JobsContext);
   if (!context) {
-    throw new Error('useJobs must be used within a JobsProvider');
+    throw new Error('UseJobs must be used within a JobsProvider');
   }
   return context;
 };

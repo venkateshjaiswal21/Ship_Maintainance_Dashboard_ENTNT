@@ -35,10 +35,10 @@ export const ComponentsProvider = ({ children }) => {
   );
 };
 
-export const useComponents = () => {
+export const UseComponents = () => {
   const context = useContext(ComponentsContext);
   if (!context) {
-    throw new Error('useComponents must be used within a ComponentsProvider');
+    throw new Error('UseComponents must be used within a ComponentsProvider');
   }
   return context;
 };
