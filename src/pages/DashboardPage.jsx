@@ -2,12 +2,13 @@ import React from 'react';
 import { UseAuth } from '../contexts/AuthContext';
 import '../styles/DashboardPage.css';
 import DashboardNav from '../components/Dashboard/DashboardNav';
+import JobCalendar from '../components/Jobs/JobCalendar';
 
 const DashboardPage = () => {
   const { user, logout } = UseAuth();
 
   return (
-    <div className="dashboard">
+    <div className="dashboard-page-container">
       <header className="dashboard-header">
         <h2>Ship Maintenance Dashboard</h2>
         <div className="user-info">
@@ -19,28 +20,13 @@ const DashboardPage = () => {
         </div>
       </header>
       <DashboardNav />
-      <main className="dashboard-content">
-        {user.role === 'admin' && (
-          <div className="admin-section">
-            <h2>Admin Controls</h2>
-            <p>Welcome to the admin dashboard. You have full access to all features.</p>
-          </div>
-        )}
-
-        {user.role === 'engineer' && (
-          <div className="engineer-section">
-            <h2>Engineer Dashboard</h2>
-            <p>Welcome to the engineer dashboard. You can view and update maintenance tasks.</p>
-          </div>
-        )}
-
-        {user.role === 'inspector' && (
-          <div className="inspector-section">
-            <h2>Inspector Dashboard</h2>
-            <p>Welcome to the inspector dashboard. You can review and approve maintenance work.</p>
-          </div>
-        )}
-      </main>
+      <div className="dashboard-content">
+        <h2>Welcome, {user.name}</h2>
+        <div className="dashboard-section">
+          <h3>Maintenance Calendar</h3>
+          <JobCalendar />
+        </div>
+      </div>
     </div>
   );
 };
