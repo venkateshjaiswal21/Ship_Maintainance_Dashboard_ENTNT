@@ -26,6 +26,7 @@ const JobsPage = () => {
   const [selectedShip, setSelectedShip] = useState('');
   const [selectedStatus, setSelectedStatus] = useState('');
   const [selectedPriority, setSelectedPriority] = useState('');
+  const [selectedEngineer, setSelectedEngineer] = useState('');
   const [filteredJobs, setFilteredJobs] = useState(jobs);
 
   const handleAddJob = () => {
@@ -92,6 +93,9 @@ const JobsPage = () => {
       status: selectedStatus,
       priority: selectedPriority,
     });
+    if (selectedEngineer) {
+      filtered = filtered.filter(j => j.assignedEngineerId === selectedEngineer);
+    }
     if (isEngineer) {
       filtered = filtered.filter(j => j.assignedEngineerId === user.id);
     }
@@ -129,6 +133,12 @@ const JobsPage = () => {
           <option value="High">High</option>
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>
+        </select>
+        <select value={selectedEngineer} onChange={e => setSelectedEngineer(e.target.value)}>
+          <option value="">All Engineers</option>
+          {engineers.map(e => (
+            <option key={e.id} value={e.id}>{e.name}</option>
+          ))}
         </select>
         <button onClick={handleFilter}>Filter</button>
       </div>
