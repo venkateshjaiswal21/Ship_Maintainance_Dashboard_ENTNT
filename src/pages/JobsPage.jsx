@@ -92,13 +92,8 @@ const JobsPage = () => {
       shipId: selectedShip,
       status: selectedStatus,
       priority: selectedPriority,
+      engineer: selectedEngineer,
     });
-    if (selectedEngineer) {
-      filtered = filtered.filter(j => j.assignedEngineerId === selectedEngineer);
-    }
-    if (isEngineer) {
-      filtered = filtered.filter(j => j.assignedEngineerId === user.id);
-    }
     setFilteredJobs(filtered);
   };
 

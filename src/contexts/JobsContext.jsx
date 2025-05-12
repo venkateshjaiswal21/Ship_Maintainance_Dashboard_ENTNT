@@ -46,12 +46,12 @@ export const JobsProvider = ({ children }) => {
     ));
   };
 
-  // Filter jobs by shipId, status, and priority
-  const filterJobs = ({ shipId = '', status = '', priority = '' }) => {
+  const filterJobs = ({ shipId = '', status = '', priority = '', engineer = '' }) => {
     return jobs.filter(job =>
       (shipId ? job.shipId === shipId : true) &&
       (status ? job.status === status : true) &&
-      (priority ? job.priority === priority : true)
+      (priority ? job.priority === priority : true) &&
+      (engineer ? job.assignedEngineerId === engineer : true)
     );
   };
 
