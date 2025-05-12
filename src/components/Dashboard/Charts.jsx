@@ -93,7 +93,7 @@ const Charts = () => {
       </div>
       <div className="chart-card">
         <h3>Jobs Completed Over Time</h3>
-        <Line data={jobsCompletedOverTime} options={{ responsive: true, id: 'jobsCompletedOverTime' }} />
+        <Line data={jobsCompletedOverTime} options={{ responsive: true, id: 'jobsCompletedOverTime', scales: { y: { beginAtZero: true } } }} />
       </div>
       <div className="chart-card">
         <h3>Components by Maintenance Status</h3>
