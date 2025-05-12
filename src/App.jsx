@@ -9,6 +9,7 @@ import { ShipsProvider } from './contexts/ShipsContext';
 import ComponentDetailPage from './pages/ComponentDetailPage';
 import { ComponentsProvider } from './contexts/ComponentsContext';
 import { JobsProvider } from './contexts/JobsContext';
+import  NotificationProvider from './contexts/NotificationContext';
 import JobsPage from './pages/JobsPage';
 
 const ProtectedRoute = ({ children }) => {
@@ -31,6 +32,7 @@ function App() {
       <ShipsProvider>
         <ComponentsProvider>
           <JobsProvider>
+          <NotificationProvider>
           <Router>
             <Routes>
               <Route path="/login" element={<LoginPage />} />
@@ -70,6 +72,7 @@ function App() {
               } />
             </Routes>
           </Router>
+          </NotificationProvider>
           </JobsProvider> 
       </ComponentsProvider>
       </ShipsProvider>

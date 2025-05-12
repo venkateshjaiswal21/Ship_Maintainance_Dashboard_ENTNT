@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { UseAuth } from '../contexts/AuthContext';
 import { UseJobs } from '../contexts/JobsContext';
 import { UseShips } from '../contexts/ShipsContext';
@@ -7,11 +7,13 @@ import JobList from '../components/Jobs/JobList';
 import JobForm from '../components/Jobs/JobForm';
 import '../styles/ShipsPage.css';
 import DashboardNav from '../components/Dashboard/DashboardNav';
+import { NotificationContext } from '../contexts/NotificationContext';
 
 const JobsPage = () => {
   const { user } = UseAuth();
   const { jobs, addJob, editJob, deleteJob, filterJobs, updateJobStatus, approveJob, unapproveJob } = UseJobs();
   const { ships } = UseShips();
+  const { addNotification } = useContext(NotificationContext);
   const isAdmin = user.role.toLowerCase() === 'admin';
   const isEngineer = user.role.toLowerCase() === 'engineer';
   const isInspector = user.role.toLowerCase() === 'inspector';
@@ -50,6 +52,10 @@ const JobsPage = () => {
 
   const handleStatusUpdate = (jobId, newStatus) => {
     updateJobStatus(jobId, newStatus);
+    if (newStatus === 'Completed') {
+      const job = jobs.find(j => j.id === jobId);
+      addNotification('JOB_COMPLETED', `Job '${job?.type || jobId}' was completed.`);
+    }
   };
 
   const handleApprove = (jobId) => {
@@ -67,9 +73,11 @@ const JobsPage = () => {
   const handleFormSubmit = (jobData) => {
     if (formInitialData && formInitialData.id) {
       editJob(jobData);
+      addNotification('JOB_UPDATED', `Job '${jobData.type}' was updated.`);
     } else {
       const newJob = { ...jobData, id: Date.now().toString() };
       addJob(newJob);
+      addNotification('JOB_CREATED', `Job '${jobData.type}' was created.`);
     }
     setShowForm(false);
   };

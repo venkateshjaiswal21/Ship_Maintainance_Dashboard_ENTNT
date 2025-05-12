@@ -5,6 +5,7 @@ import DashboardNav from '../components/Dashboard/DashboardNav';
 import JobCalendar from '../components/Jobs/JobCalendar';
 import KPICards from '../components/Dashboard/KPICards';
 import Charts from '../components/Dashboard/Charts';
+import NotificationCenter from '../components/Notifications/NotificationCenter';
 const DashboardPage = () => {
   const { user, logout } = UseAuth();
 
@@ -21,6 +22,7 @@ const DashboardPage = () => {
         </div>
       </header>
       <DashboardNav />
+      <NotificationCenter />
       <br />
       <KPICards />
       <br />
