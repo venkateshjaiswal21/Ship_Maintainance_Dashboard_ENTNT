@@ -158,14 +158,13 @@ export const MData = {
     }
   ],
   components: [
-    // Ship 1 Components
     {
       id: "c1",
       shipId: "s1",
       name: "Main Engine",
       serialNumber: "ME-1234",
       installDate: "2024-11-10",
-      lastMaintenanceDate: "2024-12-12"
+      lastMaintenanceDate: "2024-01-10"
     },
     {
       id: "c2",
@@ -173,7 +172,7 @@ export const MData = {
       name: "Radar System",
       serialNumber: "RAD-5678",
       installDate: "2024-12-15",
-      lastMaintenanceDate: "2025-01-01"
+      lastMaintenanceDate: "2024-01-15"
     },
     {
       id: "c3",
@@ -181,16 +180,15 @@ export const MData = {
       name: "Propeller",
       serialNumber: "PR-1111",
       installDate: "2025-01-22",
-      lastMaintenanceDate: "2025-02-15"
+      lastMaintenanceDate: "2024-02-10"
     },
-    // Ship 2 Components
     {
       id: "c4",
       shipId: "s2",
       name: "Navigation System",
       serialNumber: "NAV-2222",
       installDate: "2024-11-20",
-      lastMaintenanceDate: "2024-12-20"
+      lastMaintenanceDate: "2024-01-20"
     },
     {
       id: "c5",
@@ -198,7 +196,7 @@ export const MData = {
       name: "Anchor System",
       serialNumber: "AN-3333",
       installDate: "2024-12-28",
-      lastMaintenanceDate: "2025-01-20"
+      lastMaintenanceDate: "2024-01-25"
     },
     {
       id: "c6",
@@ -206,16 +204,15 @@ export const MData = {
       name: "Lifeboat System",
       serialNumber: "LB-4444",
       installDate: "2025-01-15",
-      lastMaintenanceDate: "2025-02-15"
+      lastMaintenanceDate: "2024-02-15"
     },
-    // Ship 3 Components
     {
       id: "c7",
       shipId: "s3",
       name: "Fire Suppression",
       serialNumber: "FS-5555",
       installDate: "2024-12-01",
-      lastMaintenanceDate: "2025-01-01"
+      lastMaintenanceDate: "2024-02-20"
     },
     {
       id: "c8",
@@ -223,7 +220,7 @@ export const MData = {
       name: "Communication System",
       serialNumber: "COM-6666",
       installDate: "2025-01-20",
-      lastMaintenanceDate: "2025-02-20"
+      lastMaintenanceDate: "2024-03-15"
     },
     {
       id: "c9",
@@ -233,7 +230,6 @@ export const MData = {
       installDate: "2025-02-15",
       lastMaintenanceDate: "2025-03-15"
     },
-    // Ship 4 Components
     {
       id: "c10",
       shipId: "s4",
@@ -258,7 +254,6 @@ export const MData = {
       installDate: "2025-01-10",
       lastMaintenanceDate: "2025-02-10"
     },
-    // Ship 5 Components
     {
       id: "c13",
       shipId: "s5",
@@ -283,7 +278,6 @@ export const MData = {
       installDate: "2025-02-10",
       lastMaintenanceDate: "2025-03-10"
     },
-    // Ship 6 Components
     {
       id: "c16",
       shipId: "s6",
@@ -308,7 +302,6 @@ export const MData = {
       installDate: "2025-01-20",
       lastMaintenanceDate: "2025-02-20"
     },
-    // Ship 7 Components
     {
       id: "c19",
       shipId: "s7",
@@ -333,7 +326,6 @@ export const MData = {
       installDate: "2025-02-10",
       lastMaintenanceDate: "2025-03-10"
     },
-    // Ship 8 Components
     {
       id: "c22",
       shipId: "s8",
@@ -358,7 +350,6 @@ export const MData = {
       installDate: "2025-01-12",
       lastMaintenanceDate: "2025-02-12"
     },
-    // Ship 9 Components
     {
       id: "c25",
       shipId: "s9",
@@ -383,7 +374,6 @@ export const MData = {
       installDate: "2025-02-10",
       lastMaintenanceDate: "2025-03-10"
     },
-    // Ship 10 Components
     {
       id: "c28",
       shipId: "s10",
@@ -410,7 +400,6 @@ export const MData = {
     }
   ],
   jobs: [
-    // Jobs for Component 1
     {
       id: "j1",
       componentId: "c1",
@@ -433,7 +422,6 @@ export const MData = {
       scheduledDate: "2024-12-10",
       completedDate: "2024-12-12"
     },
-    // Jobs for Component 2
     {
       id: "j3",
       componentId: "c2",
@@ -456,7 +444,6 @@ export const MData = {
       scheduledDate: "2025-01-15",
       completedDate: null
     },
-    // Jobs for Component 3
     {
       id: "j5",
       componentId: "c3",
@@ -479,7 +466,6 @@ export const MData = {
       scheduledDate: "2025-02-20",
       completedDate: null
     },
-    // Jobs for Component 4
     {
       id: "j7",
       componentId: "c4",
@@ -502,7 +488,6 @@ export const MData = {
       scheduledDate: "2024-12-15",
       completedDate: null
     },
-    // Jobs for Component 5
     {
       id: "j9",
       componentId: "c5",
@@ -525,7 +510,6 @@ export const MData = {
       scheduledDate: "2025-01-20",
       completedDate: null
     },
-    // Jobs for Component 6
     {
       id: "j11",
       componentId: "c6",
@@ -548,7 +532,6 @@ export const MData = {
       scheduledDate: "2025-02-25",
       completedDate: null
     },
-    // Jobs for Component 7
     {
       id: "j13",
       componentId: "c7",
@@ -571,7 +554,6 @@ export const MData = {
       scheduledDate: "2025-01-10",
       completedDate: null
     },
-    // Jobs for Component 8
     {
       id: "j15",
       componentId: "c8",
@@ -594,7 +576,6 @@ export const MData = {
       scheduledDate: "2025-02-25",
       completedDate: null
     },
-    // Jobs for Component 9
     {
       id: "j17",
       componentId: "c9",
@@ -617,7 +598,6 @@ export const MData = {
       scheduledDate: "2025-03-20",
       completedDate: null
     },
-    // Jobs for Component 10
     {
       id: "j19",
       componentId: "c10",
@@ -640,7 +620,6 @@ export const MData = {
       scheduledDate: "2024-12-20",
       completedDate: null
     },
-    // Jobs for Component 11
     {
       id: "j21",
       componentId: "c11",
@@ -663,7 +642,6 @@ export const MData = {
       scheduledDate: "2025-01-25",
       completedDate: null
     },
-    // Jobs for Component 12
     {
       id: "j23",
       componentId: "c12",
@@ -686,7 +664,6 @@ export const MData = {
       scheduledDate: "2025-02-20",
       completedDate: null
     },
-    // Jobs for Component 13
     {
       id: "j25",
       componentId: "c13",
@@ -709,7 +686,6 @@ export const MData = {
       scheduledDate: "2024-01-10",
       completedDate: null
     },
-    // Jobs for Component 14
     {
       id: "j27",
       componentId: "c14",
@@ -732,7 +708,6 @@ export const MData = {
       scheduledDate: "2024-02-25",
       completedDate: null
     },
-    // Jobs for Component 15
     {
       id: "j29",
       componentId: "c15",
@@ -755,7 +730,6 @@ export const MData = {
       scheduledDate: "2024-03-20",
       completedDate: null
     },
-    // Jobs for Component 16
     {
       id: "j31",
       componentId: "c16",
@@ -778,7 +752,6 @@ export const MData = {
       scheduledDate: "2023-12-10",
       completedDate: null
     },
-    // Jobs for Component 17
     {
       id: "j33",
       componentId: "c17",
@@ -801,7 +774,6 @@ export const MData = {
       scheduledDate: "2024-01-15",
       completedDate: null
     },
-    // Jobs for Component 18
     {
       id: "j35",
       componentId: "c18",
@@ -824,7 +796,6 @@ export const MData = {
       scheduledDate: "2024-02-20",
       completedDate: null
     },
-    // Jobs for Component 19
     {
       id: "j37",
       componentId: "c19",
@@ -847,7 +818,6 @@ export const MData = {
       scheduledDate: "2024-01-10",
       completedDate: null
     },
-    // Jobs for Component 20
     {
       id: "j39",
       componentId: "c20",
@@ -870,7 +840,6 @@ export const MData = {
       scheduledDate: "2024-02-25",
       completedDate: null
     },
-    // Jobs for Component 21
     {
       id: "j41",
       componentId: "c21",
@@ -893,7 +862,6 @@ export const MData = {
       scheduledDate: "2024-03-20",
       completedDate: null
     },
-    // Jobs for Component 22
     {
       id: "j43",
       componentId: "c22",
@@ -916,7 +884,6 @@ export const MData = {
       scheduledDate: "2023-12-18",
       completedDate: null
     },
-    // Jobs for Component 23
     {
       id: "j45",
       componentId: "c23",
@@ -939,7 +906,6 @@ export const MData = {
       scheduledDate: "2024-02-05",
       completedDate: null
     },
-    // Jobs for Component 24
     {
       id: "j47",
       componentId: "c24",
@@ -962,7 +928,6 @@ export const MData = {
       scheduledDate: "2024-02-22",
       completedDate: null
     },
-    // Jobs for Component 25
     {
       id: "j49",
       componentId: "c25",
@@ -985,7 +950,6 @@ export const MData = {
       scheduledDate: "2024-01-20",
       completedDate: null
     },
-    // Jobs for Component 26
     {
       id: "j51",
       componentId: "c26",
@@ -1008,7 +972,6 @@ export const MData = {
       scheduledDate: "2024-03-05",
       completedDate: null
     },
-    // Jobs for Component 27
     {
       id: "j53",
       componentId: "c27",
@@ -1031,7 +994,6 @@ export const MData = {
       scheduledDate: "2024-03-20",
       completedDate: null
     },
-    // Jobs for Component 28
     {
       id: "j55",
       componentId: "c28",
@@ -1054,7 +1016,6 @@ export const MData = {
       scheduledDate: "2023-12-22",
       completedDate: null
     },
-    // Jobs for Component 29
     {
       id: "j57",
       componentId: "c29",
@@ -1077,7 +1038,6 @@ export const MData = {
       scheduledDate: "2024-01-25",
       completedDate: null
     },
-    // Jobs for Component 30
     {
       id: "j59",
       componentId: "c30",
